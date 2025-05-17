@@ -1,82 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willian Atarihuana's Resume</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Willian Atarihuana | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      color: #f5c518;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #f5c518;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+    }
+    .section-title {
+      color: #f5c518;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #f5c518;
+      display: inline-block;
+    }
+    .card {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(245, 197, 24, 0.2);
+    }
+    .icon {
+      margin-right: 10px;
+      color: #f5c518;
+    }
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    .skills-list div {
+      background-color: #262626;
+      padding: 0.7rem;
+      border-radius: 5px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #1a1a1a;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    a.button {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      margin-top: 1rem;
+      background-color: #f5c518;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Willian Atarihuana</h1>
-        <p>+1 236-785-2215 | willian.atarihuana98@gmail.com | Burnaby, BC | <a href="https://www.linkedin.com/in/willianatarihuana">LinkedIn</a></p>
-    </header>
-    <section>
-        <h2>Professional Summary</h2>
-        <p>Two years of experience working with databases, with a strong foundation in data analysis, business operations, and customer service. Currently pursuing a Diploma in Data Engineering and Analytics at the Canadian College of Technology and Business. Building practical knowledge in Python, SQL, Tableau, Power BI, and machine learning through coursework and hands-on learning projects. Familiar with basic data analysis techniques and concepts such as exploratory data analysis (EDA), data visualization, and predictive modeling, and eager to deepen expertise in these areas. Passionate about using data to support business decisions and improve user experiences, especially in industries like retail. Known for being adaptable, proactive, and committed to continuous learning.</p>
-    </section>
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Programming Languages: Python, SQL</li>
-            <li>Productivity Applications: Microsoft Office (Excel, PPT, Word)</li>
-            <li>Data Visualization Tools: Tableau, Power BI</li>
-            <li>Data Analysis Tools: Jupyter Lab, SAP</li>
-            <li>Machine Learning: Basic understanding of ML techniques for data analysis.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Relevant Experience</h2>
-        <h3>CCTB Projects</h3>
-        <ul>
-            <li>Exploratory Data Analysis (EDA) with the IRIS and Wine quality Dataset using Jupyter Lab with some basic visualizations.</li>
-            <li>Developed a fast-food restaurant simulation in Python, applying object-oriented principles such as inheritance, abstraction, and polymorphism to model systems like ordering, cooking, and fulfillment using abstract and concrete classes.</li>
-            <li>Utilized SQL to query and analyze datasets using SELECT, FROM, WHERE, GROUP BY, and conditional statements to extract insights and support data-driven decision making.</li>
-        </ul>
-        <h3>Buyer Analyst</h3>
-        <p>ETATEX C.A. | Quito, Ecuador | July 2023 – April 2024</p>
-        <ul>
-            <li>Conducted data analysis, created dashboards, and interpreted key metrics to support decision-making and continuous improvement with tools like Excel, SAP and Power BI.</li>
-            <li>Customer service and management of national and international suppliers.</li>
-            <li>Managed quality control, resolved nationwide store requirements, and developed compliance compensation programs for employees.</li>
-            <li>Prepared weekly reports and devised plans to enhance annual sales, purchasing trends, and product promotions.</li>
-            <li>Developed new textile products and strategies to expand market reach and attract distributors.</li>
-        </ul>
-        <h3>Internal Purchases Analyst</h3>
-        <p>ICESA S.A. | Quito, Ecuador | September 2022 – May 2023</p>
-        <ul>
-            <li>Assignment of schedules for impulse personnel in stores with management tools.</li>
-            <li>Customer service and problem solving.</li>
-            <li>Collaborated with cross-functional teams to implement data-driven solutions, improving operational performance.</li>
-            <li>Check that all necessary material is available for the offices and create reports for new orders.</li>
-            <li>Presented proposals to buyers and collaborated on marketing strategies.</li>
-            <li>Create product strategies to achieve positive results.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <h3>Canadian College of Technology and Business | Vancouver, BC</h3>
-        <p>Data Engineering and Analytics with Co-op, IT | Expected June 2025</p>
-        <ul>
-            <li>Relevant coursework: Python, Tableau, Power BI, Jupyter Lab, Machine Learning, SQL, Big Data Technologies and Data Science.</li>
-            <li>Hands-on experience in exploratory data analysis (EDA), data visualization, and predictive modeling.</li>
-        </ul>
-        <h3>University of Americas | Quito, Ecuador</h3>
-        <p>Bachelor of International Business, Business | Graduated July 2022</p>
-        <ul>
-            <li>Developed a strong foundation in business analytics, logistics, and cross-functional collaboration.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Business Analysis Foundations (LinkedIn)</li>
-            <li>Business Analyst and Project Manager Collaboration (LinkedIn)</li>
-            <li>Learning Excel: Data Analysis (LinkedIn)</li>
-            <li>SQL for Data Analysis</li>
-        </ul>
-    </section>
+  <header>
+    <h1>Willian Atarihuana</h1>
+    <p>Data Engineering & Business Analyst</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+      <p>
+        Passionate about data, technology, and solving business problems. Currently studying Data Engineering & Analytics in Canada. Background in International Business with hands-on experience in SQL, Python, Power BI, Tableau, and customer support.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-list">
+      <div><i class="fas fa-code icon"></i>Python</div>
+      <div><i class="fas fa-database icon"></i>SQL</div>
+      <div><i class="fas fa-chart-bar icon"></i>Power BI</div>
+      <div><i class="fas fa-chart-pie icon"></i>Tableau</div>
+      <div><i class="fas fa-file-alt icon"></i>Excel</div>
+      <div><i class="fas fa-laptop-code icon"></i>VS Code</div>
+      <div><i class="fas fa-flask icon"></i>EDA</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="card">
+      <h3>Fast Food Restaurant Simulation</h3>
+      <p>Modeled a restaurant system in Python using OOP, managing cooking, orders, and fulfillment.</p>
+    </div>
+    <div class="card">
+      <h3>EDA with IRIS and Wine Dataset</h3>
+      <p>Exploratory Data Analysis and visualizations using Jupyter Lab and Python.</p>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <div class="card">
+      <p>You can download my latest resume here:</p>
+      <a href="Willian_Atarihuana_Resume.pdf" class="button" download>Download Resume</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="card">
+      <p><i class="fas fa-phone icon"></i> +1 236-785-2215</p>
+      <p><i class="fas fa-envelope icon"></i> willian.atarihuana98@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt icon"></i> Burnaby, BC</p>
+      <p><i class="fab fa-linkedin icon"></i> <a href="https://www.linkedin.com/in/willianatarihuana" style="color: #f5c518;">LinkedIn Profile</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Willian Atarihuana | All rights reserved
+  </footer>
 </body>
 </html>
+
 
 
