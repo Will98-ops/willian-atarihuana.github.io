@@ -3,52 +3,44 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Willian Atarihuana - Resume</title>
+<title>Willian Atarihuana - Portfolio Resume</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-  /* Reset y base */
   body {
     margin: 0;
-    background-color: #000000;
-    color: #00ffea;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background: #f4f6f8;
+    color: #333;
     padding: 40px;
-    line-height: 1.5;
   }
 
   h1, h2, h3 {
-    font-family: 'Orbitron', monospace;
-    text-shadow:
-      0 0 5px #00ffea,
-      0 0 10px #00ffea,
-      0 0 20px #00ffea,
-      0 0 40px #00ffe0;
+    color: #222;
     margin-bottom: 10px;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: center;
-    margin-bottom: 5px;
+    color: #007acc;
   }
 
   h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #00ffea;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #007acc;
     padding-bottom: 6px;
     margin-top: 40px;
   }
 
   h3 {
-    font-size: 1.4rem;
-    margin-top: 30px;
-    color: #00ccc0;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #005f8f;
   }
 
   p, li {
     font-size: 1rem;
-    max-width: 900px;
     margin-bottom: 10px;
   }
 
@@ -57,46 +49,44 @@
   }
 
   a {
-    color: #00fff3;
+    color: #007acc;
     text-decoration: none;
-    border-bottom: 1px dashed #00fff3;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px dotted #007acc;
+    transition: color 0.3s ease;
   }
 
   a:hover {
-    color: #00ffaa;
-    border-color: #00ffaa;
+    color: #005f8f;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
   }
 
   .contact-info {
     text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    letter-spacing: 1.2px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
   }
 
-  /* Neon box effect */
   .section {
-    background: #0a0a0a;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow:
-      0 0 10px #00ffea,
-      0 0 20px #00ffea,
-      inset 0 0 8px #00ffea;
-    max-width: 950px;
-    margin: 0 auto 40px auto;
+    margin-bottom: 30px;
   }
 
-  /* Bullet style */
   li::marker {
-    color: #00ffe0;
-    font-weight: bold;
+    color: #007acc;
   }
 </style>
 </head>
 <body>
 
+<div class="container">
   <h1>Willian Atarihuana</h1>
   <div class="contact-info">
     +1 236-785-2215 | <a href="mailto:willian.atarihuana98@gmail.com">willian.atarihuana98@gmail.com</a> | Burnaby, BC | <a href="https://www.linkedin.com/in/willianatarihuana" target="_blank">linkedin.com/in/willianatarihuana</a>
@@ -104,18 +94,16 @@
 
   <div class="section">
     <h2>Professional Summary</h2>
-    <p>Two years of experience working with databases, with a strong foundation in data analysis, business operations, and customer service. Currently pursuing a Diploma in Data Engineering and Analytics at the Canadian College of Technology and Business. Building practical knowledge in Python, SQL, Tableau, Power BI, and machine learning through coursework and hands-on learning projects.</p>
-    <p>Familiar with basic data analysis techniques and concepts such as exploratory data analysis (EDA), data visualization, and predictive modeling, and eager to deepen expertise in these areas. Passionate about using data to support business decisions and improve user experiences, especially in industries like retail. Known for being adaptable, proactive, and committed to continuous learning.</p>
+    <p>Two years of experience working with databases and a solid foundation in data analysis, business operations, and customer service. Currently pursuing a Diploma in Data Engineering and Analytics at the Canadian College of Technology and Business. Gaining practical knowledge in Python, SQL, Tableau, Power BI, and machine learning through coursework and real-world projects.</p>
+    <p>Passionate about using data to improve business decisions and user experience. Known for adaptability, a proactive mindset, and a commitment to continuous learning.</p>
   </div>
 
   <div class="section">
     <h2>Technical Skills</h2>
     <ul>
-      <li>Programming Languages: Python, SQL</li>
-      <li>Productivity Applications: Microsoft Office (Excel, PPT, Word)</li>
-      <li>Data Visualization Tools: Tableau, Power BI</li>
-      <li>Data Analysis Tools: Jupyter Lab, SAP</li>
-      <li>Machine Learning: Basic understanding of ML techniques for data analysis</li>
+      <li>Languages: Python, SQL</li>
+      <li>Tools: Tableau, Power BI, Jupyter Lab, SAP, Excel</li>
+      <li>Concepts: Data Analysis, Data Visualization, EDA, Predictive Modeling</li>
     </ul>
   </div>
 
@@ -124,62 +112,56 @@
 
     <h3>CCTB Projects</h3>
     <ul>
-      <li>Exploratory Data Analysis (EDA) with the IRIS and Wine quality Dataset using Jupyter Lab with some basic visualizations.</li>
-      <li>Developed a fast-food restaurant simulation in Python, applying object-oriented principles such as inheritance, abstraction, and polymorphism to model systems like ordering, cooking, and fulfillment using abstract and concrete classes.</li>
-      <li>Utilized SQL to query and analyze datasets using SELECT, FROM, WHERE, GROUP BY, and conditional statements to extract insights and support data-driven decision making.</li>
+      <li>Performed EDA on datasets (IRIS, Wine Quality) using Python and Jupyter Lab.</li>
+      <li>Created a simulation of a fast-food system applying OOP principles (inheritance, abstraction, etc.).</li>
+      <li>Used SQL for data extraction and reporting with SELECT, GROUP BY, and conditional logic.</li>
     </ul>
 
     <h3>Buyer Analyst</h3>
-    <p><strong>ETATEX C.A. | Quito, Ecuador | July 2023 – April 2024</strong></p>
+    <p><strong>ETATEX C.A. | Quito, Ecuador | Jul 2023 – Apr 2024</strong></p>
     <ul>
-      <li>Conducted data analysis, created dashboards, and interpreted key metrics to support decision-making and continuous improvement with tools like Excel, SAP and Power BI.</li>
-      <li>Customer service and management of national and international suppliers.</li>
-      <li>Managed quality control, resolved nationwide store requirements, and developed compliance compensation programs for employees.</li>
-      <li>Prepared weekly reports and devised plans to enhance annual sales, purchasing trends, and product promotions.</li>
-      <li>Developed new textile products and strategies to expand market reach and attract distributors.</li>
+      <li>Analyzed data, built dashboards in Excel and Power BI, and supported decision-making with KPIs.</li>
+      <li>Managed supplier relations, purchasing processes, and created improvement reports.</li>
+      <li>Led product development strategies to expand reach and boost sales.</li>
     </ul>
 
     <h3>Internal Purchases Analyst</h3>
-    <p><strong>ICESA S.A. | Quito, Ecuador | September 2022 – May 2023</strong></p>
+    <p><strong>ICESA S.A. | Quito, Ecuador | Sep 2022 – May 2023</strong></p>
     <ul>
-      <li>Assignment of schedules for impulse personnel in stores with management tools.</li>
-      <li>Customer service and problem solving.</li>
-      <li>Collaborated with cross-functional teams to implement data-driven solutions, improving operational performance.</li>
-      <li>Check that all necessary material is available for the offices and create reports for new orders.</li>
-      <li>Presented proposals to buyers and collaborated on marketing strategies.</li>
-      <li>Create product strategies to achieve positive results.</li>
+      <li>Coordinated scheduling and logistics using internal tools.</li>
+      <li>Provided excellent customer support and data-driven inventory planning.</li>
+      <li>Collaborated on product strategy and marketing proposals for retail improvements.</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Education</h2>
-    <p><strong>Canadian College of Technology and Business | Vancouver, BC</strong><br />
-      Data Engineering and Analytics with Co-op, IT | Expected June 2025</p>
+    <p><strong>Canadian College of Technology and Business | Vancouver, BC</strong><br>
+    Diploma in Data Engineering and Analytics (Expected Jun 2025)</p>
     <ul>
-      <li>Relevant coursework: Python, Tableau, Power BI, Jupyter Lab, Machine Learning, SQL, Big Data Technologies and Data Science.</li>
-      <li>Hands-on experience in exploratory data analysis (EDA), data visualization, and predictive modeling.</li>
+      <li>Coursework: Python, SQL, Machine Learning, Tableau, Power BI, Big Data.</li>
     </ul>
 
-    <p><strong>University of Americas | Quito, Ecuador</strong><br />
-      Bachelor of International Business, Business | Graduated July 2022</p>
+    <p><strong>University of the Americas | Quito, Ecuador</strong><br>
+    B.A. in International Business (Jul 2022)</p>
     <ul>
-      <li>Developed a strong foundation in business analytics, logistics, and cross-functional collaboration.</li>
+      <li>Focus: Business analytics, global markets, and logistics management.</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Certifications</h2>
     <ul>
-      <li>Business Analysis Foundations (LinkedIn)</li>
-      <li>Business Analyst and Project Manager Collaboration (LinkedIn)</li>
-      <li>Learning Excel: Data Analysis (LinkedIn)</li>
+      <li>Business Analysis Foundations – LinkedIn</li>
+      <li>Business Analyst and Project Manager Collaboration – LinkedIn</li>
+      <li>Learning Excel: Data Analysis – LinkedIn</li>
       <li>SQL for Data Analysis</li>
     </ul>
   </div>
+</div>
 
 </body>
 </html>
-
 
 
 
