@@ -1,242 +1,258 @@
-npx create-react-app willian-portfolio
-cd willian-portfolio
-
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-npm install framer-motion react-icons emailjs-com
-
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        mustard: '#facc15',
-        softwhite: '#e5e7eb',
-        blackbg: '#0d1117',
-        neonblue: '#06b6d4',
-      },
-    },
-  },
-  plugins: [],
-}
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  background-color: #0d1117;
-  color: #e5e7eb;
-  font-family: 'Arial', sans-serif;
-}
-
-
-src/
-├── assets/
-│   └── Willian_Atarihuana_Resume.pdf
-├── components/
-│   ├── Navbar.js
-│   ├── Hero.js
-│   ├── About.js
-│   ├── Skills.js
-│   ├── Projects.js
-│   ├── Resume.js
-│   ├── Contact.js
-
-
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
+import {
+  FaPython,
+  FaDatabase,
+  FaTable,
+  FaChartBar,
+  FaLaptopCode,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaLinkedin,
+} from "react-icons/fa";
 
-function App() {
+const portfolioStyle = {
+  backgroundColor: "#000000",
+  color: "#fff",
+  minHeight: "100vh",
+  fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+  padding: "2rem",
+};
+
+const mustard = "#D4A017";
+const neonBlue = "#00FFFF";
+const softWhite = "#EEE";
+
+export default function Portfolio() {
   return (
-    <div className="bg-blackbg text-softwhite">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Resume />
-      <Contact />
+    <div style={portfolioStyle}>
+      {/* Header */}
+      <header style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <h1 style={{ color: mustard, fontSize: "3rem", marginBottom: "0.5rem" }}>
+          Willian Atarihuana
+        </h1>
+        <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", color: softWhite, fontSize: "1.1rem" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+            <FaPhoneAlt color={mustard} /> +1 236-785-2215
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+            <FaEnvelope color={mustard} />{" "}
+            <a
+              href="mailto:willian.atarihuana98@gmail.com"
+              style={{ color: softWhite, textDecoration: "none" }}
+            >
+              willian.atarihuana98@gmail.com
+            </a>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+            <FaMapMarkerAlt color={mustard} /> Burnaby, BC
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+            <FaLinkedin color={mustard} />{" "}
+            <a
+              href="https://www.linkedin.com/in/willianatarihuana"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: softWhite, textDecoration: "none" }}
+            >
+              linkedin.com/in/willianatarihuana
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* Section: Professional Summary */}
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
+          Professional Summary
+        </h2>
+        <p style={{ lineHeight: 1.6 }}>
+          Two years of experience working with databases, with a strong foundation
+          in data analysis, business operations, and customer service. Currently
+          pursuing a Diploma in Data Engineering and Analytics at the Canadian
+          College of Technology and Business. Building practical knowledge in
+          Python, SQL, Tableau, Power BI, and machine learning through coursework
+          and hands-on learning projects.
+        </p>
+        <p style={{ lineHeight: 1.6, marginTop: "0.7rem" }}>
+          Familiar with basic data analysis techniques and concepts such as
+          exploratory data analysis (EDA), data visualization, and predictive
+          modeling, and eager to deepen expertise in these areas. Passionate about
+          using data to support business decisions and improve user experiences,
+          especially in industries like retail. Known for being adaptable,
+          proactive, and committed to continuous learning.
+        </p>
+      </section>
+
+      {/* Section: Technical Skills */}
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
+          Technical Skills
+        </h2>
+        <div
+          style={{
+            display: "flex",
+            gap: "2rem",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          {[ 
+            { icon: <FaPython color={neonBlue} size={40} />, label: "Python" },
+            { icon: <FaDatabase color={neonBlue} size={40} />, label: "SQL" },
+            { icon: <FaTable color={neonBlue} size={40} />, label: "Power BI" },
+            { icon: <FaChartBar color={neonBlue} size={40} />, label: "Tableau" },
+            { icon: <FaLaptopCode color={neonBlue} size={40} />, label: "Jupyter Lab" },
+          ].map(({ icon, label }, i) => (
+            <div
+              key={i}
+              style={{
+                backgroundColor: "#111",
+                borderRadius: "8px",
+                padding: "1rem 1.5rem",
+                minWidth: "110px",
+                textAlign: "center",
+                boxShadow: `0 0 8px ${neonBlue}`,
+                transition: "transform 0.3s ease",
+                cursor: "default",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "scale(1.1)")
+              }
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
+              {icon}
+              <p style={{ marginTop: "0.6rem", color: softWhite, fontWeight: "600" }}>
+                {label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Section: Relevant Experience */}
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
+          Relevant Experience
+        </h2>
+
+        {/* Projects */}
+        <div style={{ marginBottom: "2rem" }}>
+          <h3 style={{ color: neonBlue, marginBottom: "0.7rem" }}>CCTB Projects</h3>
+          <ul style={{ lineHeight: 1.6 }}>
+            <li>
+              • Exploratory Data Analysis (EDA) with the IRIS and Wine quality Dataset
+              using Jupyter Lab with basic visualizations.
+            </li>
+            <li>
+              • Developed a fast-food restaurant simulation in Python, applying OOP
+              concepts such as inheritance, abstraction, and polymorphism.
+            </li>
+            <li>
+              • Utilized SQL to query and analyze datasets using SELECT, WHERE,
+              GROUP BY, and conditional statements.
+            </li>
+          </ul>
+        </div>
+
+        {/* Job 1 */}
+        <div style={{ marginBottom: "2rem" }}>
+          <h3 style={{ color: neonBlue, marginBottom: "0.7rem" }}>
+            Buyer Analyst - ETATEX C.A. | Quito, Ecuador | Jul 2023 – Apr 2024
+          </h3>
+          <ul style={{ lineHeight: 1.6 }}>
+            <li>• Conducted data analysis, dashboards, and key metric interpretation using Excel, SAP, and Power BI.</li>
+            <li>• Managed suppliers and customer service.</li>
+            <li>• Developed compliance and compensation programs for employees.</li>
+            <li>• Prepared reports to enhance sales, purchasing trends, and promotions.</li>
+            <li>• Created strategies to expand market reach and attract distributors.</li>
+          </ul>
+        </div>
+
+        {/* Job 2 */}
+        <div>
+          <h3 style={{ color: neonBlue, marginBottom: "0.7rem" }}>
+            Internal Purchases Analyst - ICESA S.A. | Quito, Ecuador | Sep 2022 – May 2023
+          </h3>
+          <ul style={{ lineHeight: 1.6 }}>
+            <li>• Assigned schedules for impulse personnel in stores with management tools.</li>
+            <li>• Customer service and problem solving.</li>
+            <li>• Collaborated with teams to improve operational performance.</li>
+            <li>• Checked materials availability and created reports.</li>
+            <li>• Presented proposals and collaborated on marketing strategies.</li>
+            <li>• Developed product strategies for positive results.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Section: Education */}
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
+          Education
+        </h2>
+        <div style={{ lineHeight: 1.6 }}>
+          <p>
+            <strong>Canadian College of Technology and Business</strong> — Data Engineering and Analytics with Co-op, IT | Expected June 2025
+          </p>
+          <p>Relevant coursework: Python, Tableau, Power BI, Jupyter Lab, Machine Learning, SQL, Big Data Technologies, and Data Science.</p>
+          <br />
+          <p>
+            <strong>University of Americas</strong> — Bachelor of International Business | Graduated July 2022
+          </p>
+          <p>Strong foundation in business analytics, logistics, and cross-functional collaboration.</p>
+        </div>
+      </section>
+
+      {/* Section: Certifications */}
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
+          Certifications
+        </h2>
+        <ul style={{ lineHeight: 1.6 }}>
+          <li>• Business Analysis Foundations (LinkedIn)</li>
+          <li>• Business Analyst and Project Manager Collaboration (LinkedIn)</li>
+          <li>• Learning Excel: Data Analysis (LinkedIn)</li>
+          <li>• SQL for Data Analysis</li>
+        </ul>
+      </section>
+
+      {/* Resume Download */}
+      <section style={{ textAlign: "center", marginTop: "3rem" }}>
+        <a
+          href="/assets/Willian_Atarihuana_Resume.pdf"
+          download="Willian_Atarihuana_Resume.pdf"
+          style={{
+            backgroundColor: neonBlue,
+            color: "#000",
+            padding: "1rem 2rem",
+            fontWeight: "700",
+            borderRadius: "9999px",
+            textDecoration: "none",
+            boxShadow: `0 0 15px ${neonBlue}`,
+            transition: "background-color 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = mustard)}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = neonBlue)}
+        >
+          Download My Resume (PDF)
+        </a>
+        <p style={{ marginTop: "1rem", color: softWhite }}>
+          Or find me on{" "}
+          <a
+            href="https://www.linkedin.com/in/willianatarihuana"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: mustard, textDecoration: "underline" }}
+          >
+            LinkedIn
+          </a>
+          .
+        </p>
+      </section>
     </div>
   );
 }
 
-export default App;
-
-        import React from "react";
-import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-
-const Navbar = () => {
-  return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-blackbg border-b border-mustard shadow-md sticky top-0 z-50">
-      <h1 className="text-2xl font-bold text-mustard">Willian Atarihuana</h1>
-      <div className="flex gap-5 text-neonblue text-lg">
-        <a href="https://www.linkedin.com/in/willianatarihuana" target="_blank" rel="noreferrer">
-          <FaLinkedin />
-        </a>
-        <a href="mailto:willian.atarihuana98@gmail.com">
-          <FaEnvelope />
-        </a>
-        <a href="tel:+12367852215">
-          <FaPhoneAlt />
-        </a>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
-
-        import React from "react";
-import { motion } from "framer-motion";
-
-const Hero = () => {
-  return (
-    <section className="h-screen flex flex-col justify-center items-center text-center px-4">
-      <motion.h2 
-        className="text-4xl sm:text-5xl md:text-6xl font-bold text-mustard"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Hello, I'm Willian
-      </motion.h2>
-      <motion.p 
-        className="mt-6 text-xl sm:text-2xl text-softwhite max-w-3xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-      >
-        Data Engineering & Business Analytics Enthusiast — passionate about turning data into action.
-      </motion.p>
-      <motion.a
-        href="#contact"
-        className="mt-10 px-6 py-3 bg-neonblue text-black font-semibold rounded-full hover:bg-mustard transition"
-        whileHover={{ scale: 1.05 }}
-      >
-        Contact Me
-      </motion.a>
-    </section>
-  );
-};
-
-export default Hero;
-
-        import React from "react";
-
-const About = () => {
-  return (
-    <section id="about" className="py-16 px-6 bg-blackbg text-softwhite">
-      <h2 className="text-3xl font-bold text-mustard mb-6 text-center">About Me</h2>
-      <div className="max-w-4xl mx-auto text-lg leading-relaxed">
-        <p>
-          I’m Willian Atarihuana — a passionate Data Engineering and Analytics student with a Bachelor's degree in International Business. I have two years of hands-on experience with databases and a strong understanding of business operations and customer service.
-        </p>
-        <p className="mt-4">
-          I enjoy solving real-world problems with data and bringing insights to life using tools like Python, SQL, Power BI, and Tableau. I’m proactive, adaptable, and constantly learning to grow professionally.
-        </p>
-      </div>
-    </section>
-  );
-};
-
-export default About;
-
-import React from "react";
-import { FaPython, FaDatabase, FaTable, FaChartBar, FaLaptopCode } from "react-icons/fa";
-
-const skills = [
-  { icon: <FaPython />, label: "Python" },
-  { icon: <FaDatabase />, label: "SQL" },
-  { icon: <FaTable />, label: "Power BI" },
-  { icon: <FaChartBar />, label: "Tableau" },
-  { icon: <FaLaptopCode />, label: "Jupyter Lab" },
-];
-
-const Skills = () => {
-  return (
-    <section id="skills" className="py-16 px-6 bg-[#0a0a0a] text-softwhite">
-      <h2 className="text-3xl font-bold text-mustard mb-8 text-center">Technical Skills</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 max-w-5xl mx-auto text-center">
-        {skills.map((skill, idx) => (
-          <div key={idx} className="flex flex-col items-center text-neonblue hover:text-mustard transition">
-            <div className="text-4xl mb-2">{skill.icon}</div>
-            <span className="text-lg font-semibold">{skill.label}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default Skills;
-
-import React from "react";
-
-const projects = [
-  {
-    title: "Exploratory Data Analysis (EDA)",
-    description:
-      "Performed EDA on IRIS and Wine Quality datasets using Jupyter Lab, creating insightful visualizations.",
-  },
-  {
-    title: "Fast-Food Restaurant Simulation",
-    description:
-      "Built a Python OOP-based system simulating ordering, cooking, and fulfillment with inheritance and abstraction.",
-  },
-  {
-    title: "SQL Data Queries",
-    description:
-      "Queried and analyzed datasets with SQL, using SELECT, GROUP BY, and conditional filters to support business decisions.",
-  },
-];
-
-const Projects = () => {
-  return (
-    <section id="projects" className="py-16 px-6 bg-blackbg text-softwhite">
-      <h2 class
-import React from "react";
-
-const Resume = () => {
-  return (
-    <section id="resume" className="py-16 px-6 bg-[#0a0a0a] text-softwhite text-center">
-      <h2 className="text-3xl font-bold text-mustard mb-6">Download My Resume</h2>
-      <a
-        href="/assets/Willian_Atarihuana_Resume.pdf"
-        download="Willian_Atarihuana_Resume.pdf"
-        className="inline-block px-6 py-3 bg-neonblue text-black font-semibold rounded-full hover:bg-mustard transition"
-      >
-        Download PDF
-      </a>
-      <p className="mt-4 text-white max-w-lg mx-auto">
-        Feel free to connect with me on{" "}
-        <a
-          href="https://www.linkedin.com/in/willianatarihuana"
-          target="_blank"
-          rel="noreferrer"
-          className="text-mustard underline hover:text-neonblue"
-        >
-          LinkedIn
-        </a>{" "}
-        for more information.
-      </p>
-    </section>
-  );
-};
-
-export default Resume;
 
 
 
