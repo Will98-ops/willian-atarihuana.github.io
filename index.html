@@ -11,49 +11,35 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-const portfolioStyle = {
-  backgroundColor: "#000000",
-  color: "#fff",
-  minHeight: "100vh",
-  fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-  padding: "2rem",
-};
-
-const mustard = "#D4A017";
-const neonBlue = "#00FFFF";
-const softWhite = "#EEE";
-
-export default function Portfolio() {
+export default function App() {
   return (
-    <div style={portfolioStyle}>
+    <div className="min-h-screen bg-blackbg text-softwhite px-6 py-12 font-sans">
       {/* Header */}
-      <header style={{ textAlign: "center", marginBottom: "3rem" }}>
-        <h1 style={{ color: mustard, fontSize: "3rem", marginBottom: "0.5rem" }}>
-          Willian Atarihuana
-        </h1>
-        <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", color: softWhite, fontSize: "1.1rem" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
-            <FaPhoneAlt color={mustard} /> +1 236-785-2215
+      <header className="text-center mb-12">
+        <h1 className="text-mustard text-5xl font-bold mb-2">Willian Atarihuana</h1>
+        <div className="flex flex-wrap justify-center gap-8 text-softwhite text-lg">
+          <div className="flex items-center gap-2">
+            <FaPhoneAlt className="text-mustard" /> +1 236-785-2215
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
-            <FaEnvelope color={mustard} />{" "}
+          <div className="flex items-center gap-2">
+            <FaEnvelope className="text-mustard" />
             <a
               href="mailto:willian.atarihuana98@gmail.com"
-              style={{ color: softWhite, textDecoration: "none" }}
+              className="hover:underline"
             >
               willian.atarihuana98@gmail.com
             </a>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
-            <FaMapMarkerAlt color={mustard} /> Burnaby, BC
+          <div className="flex items-center gap-2">
+            <FaMapMarkerAlt className="text-mustard" /> Burnaby, BC
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
-            <FaLinkedin color={mustard} />{" "}
+          <div className="flex items-center gap-2">
+            <FaLinkedin className="text-mustard" />
             <a
               href="https://www.linkedin.com/in/willianatarihuana"
               target="_blank"
               rel="noreferrer"
-              style={{ color: softWhite, textDecoration: "none" }}
+              className="hover:underline"
             >
               linkedin.com/in/willianatarihuana
             </a>
@@ -61,12 +47,10 @@ export default function Portfolio() {
         </div>
       </header>
 
-      {/* Section: Professional Summary */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
-          Professional Summary
-        </h2>
-        <p style={{ lineHeight: 1.6 }}>
+      {/* Professional Summary */}
+      <section className="mb-12 max-w-4xl mx-auto">
+        <h2 className="text-mustard text-3xl font-semibold mb-4">Professional Summary</h2>
+        <p className="leading-relaxed mb-3">
           Two years of experience working with databases, with a strong foundation
           in data analysis, business operations, and customer service. Currently
           pursuing a Diploma in Data Engineering and Analytics at the Canadian
@@ -74,7 +58,7 @@ export default function Portfolio() {
           Python, SQL, Tableau, Power BI, and machine learning through coursework
           and hands-on learning projects.
         </p>
-        <p style={{ lineHeight: 1.6, marginTop: "0.7rem" }}>
+        <p className="leading-relaxed">
           Familiar with basic data analysis techniques and concepts such as
           exploratory data analysis (EDA), data visualization, and predictive
           modeling, and eager to deepen expertise in these areas. Passionate about
@@ -84,165 +68,113 @@ export default function Portfolio() {
         </p>
       </section>
 
-      {/* Section: Technical Skills */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
-          Technical Skills
-        </h2>
-        <div
-          style={{
-            display: "flex",
-            gap: "2rem",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          {[ 
-            { icon: <FaPython color={neonBlue} size={40} />, label: "Python" },
-            { icon: <FaDatabase color={neonBlue} size={40} />, label: "SQL" },
-            { icon: <FaTable color={neonBlue} size={40} />, label: "Power BI" },
-            { icon: <FaChartBar color={neonBlue} size={40} />, label: "Tableau" },
-            { icon: <FaLaptopCode color={neonBlue} size={40} />, label: "Jupyter Lab" },
+      {/* Technical Skills */}
+      <section className="mb-12 max-w-4xl mx-auto">
+        <h2 className="text-mustard text-3xl font-semibold mb-6">Technical Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          {[
+            { icon: <FaPython className="text-neonblue w-12 h-12 mx-auto" />, label: "Python" },
+            { icon: <FaDatabase className="text-neonblue w-12 h-12 mx-auto" />, label: "SQL" },
+            { icon: <FaTable className="text-neonblue w-12 h-12 mx-auto" />, label: "Power BI" },
+            { icon: <FaChartBar className="text-neonblue w-12 h-12 mx-auto" />, label: "Tableau" },
+            { icon: <FaLaptopCode className="text-neonblue w-12 h-12 mx-auto" />, label: "Jupyter Lab" },
           ].map(({ icon, label }, i) => (
             <div
               key={i}
-              style={{
-                backgroundColor: "#111",
-                borderRadius: "8px",
-                padding: "1rem 1.5rem",
-                minWidth: "110px",
-                textAlign: "center",
-                boxShadow: `0 0 8px ${neonBlue}`,
-                transition: "transform 0.3s ease",
-                cursor: "default",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "scale(1.1)")
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+              className="bg-[#111] rounded-lg p-5 shadow-neonblue hover:scale-110 transition-transform text-center cursor-default"
             >
               {icon}
-              <p style={{ marginTop: "0.6rem", color: softWhite, fontWeight: "600" }}>
-                {label}
-              </p>
+              <p className="mt-3 font-semibold text-softwhite">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Section: Relevant Experience */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
-          Relevant Experience
-        </h2>
+      {/* Relevant Experience */}
+      <section className="mb-12 max-w-4xl mx-auto">
+        <h2 className="text-mustard text-3xl font-semibold mb-6">Relevant Experience</h2>
 
         {/* Projects */}
-        <div style={{ marginBottom: "2rem" }}>
-          <h3 style={{ color: neonBlue, marginBottom: "0.7rem" }}>CCTB Projects</h3>
-          <ul style={{ lineHeight: 1.6 }}>
-            <li>
-              • Exploratory Data Analysis (EDA) with the IRIS and Wine quality Dataset
-              using Jupyter Lab with basic visualizations.
-            </li>
-            <li>
-              • Developed a fast-food restaurant simulation in Python, applying OOP
-              concepts such as inheritance, abstraction, and polymorphism.
-            </li>
-            <li>
-              • Utilized SQL to query and analyze datasets using SELECT, WHERE,
-              GROUP BY, and conditional statements.
-            </li>
+        <div className="mb-8">
+          <h3 className="text-neonblue text-xl font-semibold mb-2">CCTB Projects</h3>
+          <ul className="list-disc ml-5 space-y-2 leading-relaxed">
+            <li>Exploratory Data Analysis (EDA) with the IRIS and Wine quality Dataset using Jupyter Lab with basic visualizations.</li>
+            <li>Developed a fast-food restaurant simulation in Python, applying OOP concepts such as inheritance, abstraction, and polymorphism.</li>
+            <li>Utilized SQL to query and analyze datasets using SELECT, WHERE, GROUP BY, and conditional statements.</li>
           </ul>
         </div>
 
-        {/* Job 1 */}
-        <div style={{ marginBottom: "2rem" }}>
-          <h3 style={{ color: neonBlue, marginBottom: "0.7rem" }}>
+        {/* ETATEX */}
+        <div className="mb-8">
+          <h3 className="text-neonblue text-xl font-semibold mb-2">
             Buyer Analyst - ETATEX C.A. | Quito, Ecuador | Jul 2023 – Apr 2024
           </h3>
-          <ul style={{ lineHeight: 1.6 }}>
-            <li>• Conducted data analysis, dashboards, and key metric interpretation using Excel, SAP, and Power BI.</li>
-            <li>• Managed suppliers and customer service.</li>
-            <li>• Developed compliance and compensation programs for employees.</li>
-            <li>• Prepared reports to enhance sales, purchasing trends, and promotions.</li>
-            <li>• Created strategies to expand market reach and attract distributors.</li>
+          <ul className="list-disc ml-5 space-y-2 leading-relaxed">
+            <li>Conducted data analysis, dashboards, and key metric interpretation using Excel, SAP, and Power BI.</li>
+            <li>Managed suppliers and customer service.</li>
+            <li>Developed compliance and compensation programs for employees.</li>
+            <li>Prepared reports to enhance sales, purchasing trends, and promotions.</li>
+            <li>Created strategies to expand market reach and attract distributors.</li>
           </ul>
         </div>
 
-        {/* Job 2 */}
+        {/* ICESA */}
         <div>
-          <h3 style={{ color: neonBlue, marginBottom: "0.7rem" }}>
+          <h3 className="text-neonblue text-xl font-semibold mb-2">
             Internal Purchases Analyst - ICESA S.A. | Quito, Ecuador | Sep 2022 – May 2023
           </h3>
-          <ul style={{ lineHeight: 1.6 }}>
-            <li>• Assigned schedules for impulse personnel in stores with management tools.</li>
-            <li>• Customer service and problem solving.</li>
-            <li>• Collaborated with teams to improve operational performance.</li>
-            <li>• Checked materials availability and created reports.</li>
-            <li>• Presented proposals and collaborated on marketing strategies.</li>
-            <li>• Developed product strategies for positive results.</li>
+          <ul className="list-disc ml-5 space-y-2 leading-relaxed">
+            <li>Assigned schedules for impulse personnel in stores with management tools.</li>
+            <li>Customer service and problem solving.</li>
+            <li>Collaborated with teams to improve operational performance.</li>
+            <li>Checked materials availability and created reports.</li>
+            <li>Presented proposals and collaborated on marketing strategies.</li>
+            <li>Developed product strategies for positive results.</li>
           </ul>
         </div>
       </section>
 
-      {/* Section: Education */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
-          Education
-        </h2>
-        <div style={{ lineHeight: 1.6 }}>
-          <p>
-            <strong>Canadian College of Technology and Business</strong> — Data Engineering and Analytics with Co-op, IT | Expected June 2025
-          </p>
-          <p>Relevant coursework: Python, Tableau, Power BI, Jupyter Lab, Machine Learning, SQL, Big Data Technologies, and Data Science.</p>
-          <br />
-          <p>
-            <strong>University of Americas</strong> — Bachelor of International Business | Graduated July 2022
-          </p>
-          <p>Strong foundation in business analytics, logistics, and cross-functional collaboration.</p>
-        </div>
+      {/* Education */}
+      <section className="mb-12 max-w-4xl mx-auto">
+        <h2 className="text-mustard text-3xl font-semibold mb-6">Education</h2>
+        <p className="mb-3">
+          <strong>Canadian College of Technology and Business</strong> — Data Engineering and Analytics with Co-op, IT | Expected June 2025
+        </p>
+        <p className="mb-6">Relevant coursework: Python, Tableau, Power BI, Jupyter Lab, Machine Learning, SQL, Big Data Technologies, and Data Science.</p>
+
+        <p className="mb-3">
+          <strong>University of Americas</strong> — Bachelor of International Business | Graduated July 2022
+        </p>
+        <p>Strong foundation in business analytics, logistics, and cross-functional collaboration.</p>
       </section>
 
-      {/* Section: Certifications */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ color: mustard, fontSize: "2rem", marginBottom: "1rem" }}>
-          Certifications
-        </h2>
-        <ul style={{ lineHeight: 1.6 }}>
-          <li>• Business Analysis Foundations (LinkedIn)</li>
-          <li>• Business Analyst and Project Manager Collaboration (LinkedIn)</li>
-          <li>• Learning Excel: Data Analysis (LinkedIn)</li>
-          <li>• SQL for Data Analysis</li>
+      {/* Certifications */}
+      <section className="mb-12 max-w-4xl mx-auto">
+        <h2 className="text-mustard text-3xl font-semibold mb-6">Certifications</h2>
+        <ul className="list-disc ml-5 space-y-2">
+          <li>Business Analysis Foundations (LinkedIn)</li>
+          <li>Business Analyst and Project Manager Collaboration (LinkedIn)</li>
+          <li>Learning Excel: Data Analysis (LinkedIn)</li>
+          <li>SQL for Data Analysis</li>
         </ul>
       </section>
 
-      {/* Resume Download */}
-      <section style={{ textAlign: "center", marginTop: "3rem" }}>
+      {/* Download Resume */}
+      <section className="text-center max-w-4xl mx-auto">
         <a
           href="/assets/Willian_Atarihuana_Resume.pdf"
-          download="Willian_Atarihuana_Resume.pdf"
-          style={{
-            backgroundColor: neonBlue,
-            color: "#000",
-            padding: "1rem 2rem",
-            fontWeight: "700",
-            borderRadius: "9999px",
-            textDecoration: "none",
-            boxShadow: `0 0 15px ${neonBlue}`,
-            transition: "background-color 0.3s ease",
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = mustard)}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = neonBlue)}
+          download
+          className="inline-block bg-neonblue text-black font-bold py-3 px-8 rounded-full shadow-neonblue hover:bg-mustard transition-colors"
         >
           Download My Resume (PDF)
         </a>
-        <p style={{ marginTop: "1rem", color: softWhite }}>
+        <p className="mt-4 text-softwhite">
           Or find me on{" "}
           <a
             href="https://www.linkedin.com/in/willianatarihuana"
             target="_blank"
             rel="noreferrer"
-            style={{ color: mustard, textDecoration: "underline" }}
+            className="text-mustard underline"
           >
             LinkedIn
           </a>
@@ -252,6 +184,7 @@ export default function Portfolio() {
     </div>
   );
 }
+
 
 
 
