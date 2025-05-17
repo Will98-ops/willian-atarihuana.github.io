@@ -1,167 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Willian Atarihuana - Portfolio Resume</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+import { useState } from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f4f6f8;
-    color: #333;
-    padding: 40px;
-  }
+export default function Portfolio() {
+  return (
+    <main className="bg-blackbg min-h-screen text-softwhite px-6 py-10 font-sans">
+      <section className="text-center mb-16">
+        <motion.h1
+          className="text-4xl font-bold text-neonblue mb-2"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Willian Atarihuana
+        </motion.h1>
+        <p className="text-lg">Aspiring Data Engineer | Passionate about analytics, code & design</p>
+        <div className="flex justify-center gap-6 mt-4">
+          <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" className="hover:text-neonblue">
+            <FaGithub size={24} />
+          </a>
+          <a href="https://linkedin.com/in/willianatarihuana" target="_blank" rel="noopener noreferrer" className="hover:text-neonblue">
+            <FaLinkedin size={24} />
+          </a>
+          <a href="mailto:willian.atarihuana98@gmail.com" className="hover:text-neonblue">
+            <FaEnvelope size={24} />
+          </a>
+        </div>
+        <a
+          href="/assets/willian_atarihuana_resume.pdf"
+          download
+          className="inline-flex items-center gap-2 border mt-6 px-4 py-2 rounded-xl text-sm border-neonblue text-neonblue hover:bg-neonblue hover:text-black transition"
+        >
+          <FaDownload /> Download CV
+        </a>
+      </section>
 
-  h1, h2, h3 {
-    color: #222;
-    margin-bottom: 10px;
-  }
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-neonblue mb-4">About Me</h2>
+        <p className="max-w-3xl mx-auto">
+          I am a data-driven and detail-oriented professional currently studying Data Engineering and Analytics in Canada. I am passionate about using data to solve real-world problems, and I enjoy working with Python, SQL, Tableau, and machine learning.
+        </p>
+      </section>
 
-  h1 {
-    font-size: 2.8rem;
-    text-align: center;
-    color: #007acc;
-  }
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-neonblue mb-4">Skills</h2>
+        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Tableau</li>
+          <li>Power BI</li>
+          <li>Jupyter Lab</li>
+          <li>Machine Learning (Basics)</li>
+        </ul>
+      </section>
 
-  h2 {
-    font-size: 1.6rem;
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 6px;
-    margin-top: 40px;
-  }
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-neonblue mb-4">Projects</h2>
+        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="bg-black p-4 rounded-xl border border-neonblue shadow-md">
+            <h3 className="text-xl font-semibold mb-2">Fast Food Simulation</h3>
+            <p>Python project using OOP principles to model restaurant operations with classes.</p>
+          </div>
+          <div className="bg-black p-4 rounded-xl border border-neonblue shadow-md">
+            <h3 className="text-xl font-semibold mb-2">EDA with IRIS Dataset</h3>
+            <p>Exploratory Data Analysis using Jupyter Lab, visualizations, and data insights.</p>
+          </div>
+        </div>
+      </section>
 
-  h3 {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: #005f8f;
-  }
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-neonblue mb-4">Experience</h2>
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-6">
+            <h3 className="font-semibold">Buyer Analyst @ ETATEX (2023 – 2024)</h3>
+            <ul className="list-disc ml-5">
+              <li>Created dashboards using Excel and Power BI.</li>
+              <li>Improved purchasing decisions through data analysis.</li>
+              <li>Managed international supplier relationships.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold">Internal Purchases Analyst @ ICESA (2022 – 2023)</h3>
+            <ul className="list-disc ml-5">
+              <li>Developed reports for inventory and procurement.</li>
+              <li>Collaborated with marketing and logistics.</li>
+              <li>Streamlined material availability checks.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  p, li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
+      <section>
+        <h2 className="text-2xl font-bold text-neonblue mb-4">Education</h2>
+        <div className="max-w-3xl mx-auto">
+          <p><strong>CCTB, Vancouver</strong> — Diploma in Data Engineering (2023–2025)</p>
+          <p><strong>University of the Americas, Ecuador</strong> — B.A. in International Business (2017–2022)</p>
+        </div>
+      </section>
+    </main>
+  );
+}
 
-  ul {
-    margin-left: 20px;
-  }
-
-  a {
-    color: #007acc;
-    text-decoration: none;
-    border-bottom: 1px dotted #007acc;
-    transition: color 0.3s ease;
-  }
-
-  a:hover {
-    color: #005f8f;
-  }
-
-  .container {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 10px;
-  }
-
-  .contact-info {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 30px;
-    color: #555;
-  }
-
-  .section {
-    margin-bottom: 30px;
-  }
-
-  li::marker {
-    color: #007acc;
-  }
-</style>
-</head>
-<body>
-
-<div class="container">
-  <h1>Willian Atarihuana</h1>
-  <div class="contact-info">
-    +1 236-785-2215 | <a href="mailto:willian.atarihuana98@gmail.com">willian.atarihuana98@gmail.com</a> | Burnaby, BC | <a href="https://www.linkedin.com/in/willianatarihuana" target="_blank">linkedin.com/in/willianatarihuana</a>
-  </div>
-
-  <div class="section">
-    <h2>Professional Summary</h2>
-    <p>Two years of experience working with databases and a solid foundation in data analysis, business operations, and customer service. Currently pursuing a Diploma in Data Engineering and Analytics at the Canadian College of Technology and Business. Gaining practical knowledge in Python, SQL, Tableau, Power BI, and machine learning through coursework and real-world projects.</p>
-    <p>Passionate about using data to improve business decisions and user experience. Known for adaptability, a proactive mindset, and a commitment to continuous learning.</p>
-  </div>
-
-  <div class="section">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Languages: Python, SQL</li>
-      <li>Tools: Tableau, Power BI, Jupyter Lab, SAP, Excel</li>
-      <li>Concepts: Data Analysis, Data Visualization, EDA, Predictive Modeling</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Relevant Experience</h2>
-
-    <h3>CCTB Projects</h3>
-    <ul>
-      <li>Performed EDA on datasets (IRIS, Wine Quality) using Python and Jupyter Lab.</li>
-      <li>Created a simulation of a fast-food system applying OOP principles (inheritance, abstraction, etc.).</li>
-      <li>Used SQL for data extraction and reporting with SELECT, GROUP BY, and conditional logic.</li>
-    </ul>
-
-    <h3>Buyer Analyst</h3>
-    <p><strong>ETATEX C.A. | Quito, Ecuador | Jul 2023 – Apr 2024</strong></p>
-    <ul>
-      <li>Analyzed data, built dashboards in Excel and Power BI, and supported decision-making with KPIs.</li>
-      <li>Managed supplier relations, purchasing processes, and created improvement reports.</li>
-      <li>Led product development strategies to expand reach and boost sales.</li>
-    </ul>
-
-    <h3>Internal Purchases Analyst</h3>
-    <p><strong>ICESA S.A. | Quito, Ecuador | Sep 2022 – May 2023</strong></p>
-    <ul>
-      <li>Coordinated scheduling and logistics using internal tools.</li>
-      <li>Provided excellent customer support and data-driven inventory planning.</li>
-      <li>Collaborated on product strategy and marketing proposals for retail improvements.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Education</h2>
-    <p><strong>Canadian College of Technology and Business | Vancouver, BC</strong><br>
-    Diploma in Data Engineering and Analytics (Expected Jun 2025)</p>
-    <ul>
-      <li>Coursework: Python, SQL, Machine Learning, Tableau, Power BI, Big Data.</li>
-    </ul>
-
-    <p><strong>University of the Americas | Quito, Ecuador</strong><br>
-    B.A. in International Business (Jul 2022)</p>
-    <ul>
-      <li>Focus: Business analytics, global markets, and logistics management.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Business Analysis Foundations – LinkedIn</li>
-      <li>Business Analyst and Project Manager Collaboration – LinkedIn</li>
-      <li>Learning Excel: Data Analysis – LinkedIn</li>
-      <li>SQL for Data Analysis</li>
-    </ul>
-  </div>
-</div>
-
-</body>
-</html>
 
 
 
