@@ -37,5 +37,208 @@ body {
 }
 
 
+src/
+├── assets/
+│   └── Willian_Atarihuana_Resume.pdf
+├── components/
+│   ├── Navbar.js
+│   ├── Hero.js
+│   ├── About.js
+│   ├── Skills.js
+│   ├── Projects.js
+│   ├── Resume.js
+│   ├── Contact.js
+
+
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+
+function App() {
+  return (
+    <div className="bg-blackbg text-softwhite">
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Resume />
+      <Contact />
+    </div>
+  );
+}
+
+export default App;
+
+        import React from "react";
+import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+
+const Navbar = () => {
+  return (
+    <nav className="flex justify-between items-center px-6 py-4 bg-blackbg border-b border-mustard shadow-md sticky top-0 z-50">
+      <h1 className="text-2xl font-bold text-mustard">Willian Atarihuana</h1>
+      <div className="flex gap-5 text-neonblue text-lg">
+        <a href="https://www.linkedin.com/in/willianatarihuana" target="_blank" rel="noreferrer">
+          <FaLinkedin />
+        </a>
+        <a href="mailto:willian.atarihuana98@gmail.com">
+          <FaEnvelope />
+        </a>
+        <a href="tel:+12367852215">
+          <FaPhoneAlt />
+        </a>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
+
+        import React from "react";
+import { motion } from "framer-motion";
+
+const Hero = () => {
+  return (
+    <section className="h-screen flex flex-col justify-center items-center text-center px-4">
+      <motion.h2 
+        className="text-4xl sm:text-5xl md:text-6xl font-bold text-mustard"
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Hello, I'm Willian
+      </motion.h2>
+      <motion.p 
+        className="mt-6 text-xl sm:text-2xl text-softwhite max-w-3xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+      >
+        Data Engineering & Business Analytics Enthusiast — passionate about turning data into action.
+      </motion.p>
+      <motion.a
+        href="#contact"
+        className="mt-10 px-6 py-3 bg-neonblue text-black font-semibold rounded-full hover:bg-mustard transition"
+        whileHover={{ scale: 1.05 }}
+      >
+        Contact Me
+      </motion.a>
+    </section>
+  );
+};
+
+export default Hero;
+
+        import React from "react";
+
+const About = () => {
+  return (
+    <section id="about" className="py-16 px-6 bg-blackbg text-softwhite">
+      <h2 className="text-3xl font-bold text-mustard mb-6 text-center">About Me</h2>
+      <div className="max-w-4xl mx-auto text-lg leading-relaxed">
+        <p>
+          I’m Willian Atarihuana — a passionate Data Engineering and Analytics student with a Bachelor's degree in International Business. I have two years of hands-on experience with databases and a strong understanding of business operations and customer service.
+        </p>
+        <p className="mt-4">
+          I enjoy solving real-world problems with data and bringing insights to life using tools like Python, SQL, Power BI, and Tableau. I’m proactive, adaptable, and constantly learning to grow professionally.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default About;
+
+import React from "react";
+import { FaPython, FaDatabase, FaTable, FaChartBar, FaLaptopCode } from "react-icons/fa";
+
+const skills = [
+  { icon: <FaPython />, label: "Python" },
+  { icon: <FaDatabase />, label: "SQL" },
+  { icon: <FaTable />, label: "Power BI" },
+  { icon: <FaChartBar />, label: "Tableau" },
+  { icon: <FaLaptopCode />, label: "Jupyter Lab" },
+];
+
+const Skills = () => {
+  return (
+    <section id="skills" className="py-16 px-6 bg-[#0a0a0a] text-softwhite">
+      <h2 className="text-3xl font-bold text-mustard mb-8 text-center">Technical Skills</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 max-w-5xl mx-auto text-center">
+        {skills.map((skill, idx) => (
+          <div key={idx} className="flex flex-col items-center text-neonblue hover:text-mustard transition">
+            <div className="text-4xl mb-2">{skill.icon}</div>
+            <span className="text-lg font-semibold">{skill.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Skills;
+
+import React from "react";
+
+const projects = [
+  {
+    title: "Exploratory Data Analysis (EDA)",
+    description:
+      "Performed EDA on IRIS and Wine Quality datasets using Jupyter Lab, creating insightful visualizations.",
+  },
+  {
+    title: "Fast-Food Restaurant Simulation",
+    description:
+      "Built a Python OOP-based system simulating ordering, cooking, and fulfillment with inheritance and abstraction.",
+  },
+  {
+    title: "SQL Data Queries",
+    description:
+      "Queried and analyzed datasets with SQL, using SELECT, GROUP BY, and conditional filters to support business decisions.",
+  },
+];
+
+const Projects = () => {
+  return (
+    <section id="projects" className="py-16 px-6 bg-blackbg text-softwhite">
+      <h2 class
+import React from "react";
+
+const Resume = () => {
+  return (
+    <section id="resume" className="py-16 px-6 bg-[#0a0a0a] text-softwhite text-center">
+      <h2 className="text-3xl font-bold text-mustard mb-6">Download My Resume</h2>
+      <a
+        href="/assets/Willian_Atarihuana_Resume.pdf"
+        download="Willian_Atarihuana_Resume.pdf"
+        className="inline-block px-6 py-3 bg-neonblue text-black font-semibold rounded-full hover:bg-mustard transition"
+      >
+        Download PDF
+      </a>
+      <p className="mt-4 text-white max-w-lg mx-auto">
+        Feel free to connect with me on{" "}
+        <a
+          href="https://www.linkedin.com/in/willianatarihuana"
+          target="_blank"
+          rel="noreferrer"
+          className="text-mustard underline hover:text-neonblue"
+        >
+          LinkedIn
+        </a>{" "}
+        for more information.
+      </p>
+    </section>
+  );
+};
+
+export default Resume;
+
+
+
 
 
