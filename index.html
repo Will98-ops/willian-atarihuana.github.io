@@ -1,189 +1,114 @@
+// src/App.js
 import React from "react";
-import {
-  FaPython,
-  FaDatabase,
-  FaTable,
-  FaChartBar,
-  FaLaptopCode,
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaLinkedin, FaDownload } from "react-icons/fa";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-blackbg text-softwhite px-6 py-12 font-sans">
-      {/* Header */}
-      <header className="text-center mb-12">
-        <h1 className="text-mustard text-5xl font-bold mb-2">Willian Atarihuana</h1>
-        <div className="flex flex-wrap justify-center gap-8 text-softwhite text-lg">
-          <div className="flex items-center gap-2">
-            <FaPhoneAlt className="text-mustard" /> +1 236-785-2215
-          </div>
-          <div className="flex items-center gap-2">
-            <FaEnvelope className="text-mustard" />
-            <a
-              href="mailto:willian.atarihuana98@gmail.com"
-              className="hover:underline"
-            >
-              willian.atarihuana98@gmail.com
-            </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <FaMapMarkerAlt className="text-mustard" /> Burnaby, BC
-          </div>
-          <div className="flex items-center gap-2">
-            <FaLinkedin className="text-mustard" />
-            <a
-              href="https://www.linkedin.com/in/willianatarihuana"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:underline"
-            >
-              linkedin.com/in/willianatarihuana
-            </a>
-          </div>
-        </div>
-      </header>
-
-      {/* Professional Summary */}
-      <section className="mb-12 max-w-4xl mx-auto">
-        <h2 className="text-mustard text-3xl font-semibold mb-4">Professional Summary</h2>
-        <p className="leading-relaxed mb-3">
-          Two years of experience working with databases, with a strong foundation
-          in data analysis, business operations, and customer service. Currently
-          pursuing a Diploma in Data Engineering and Analytics at the Canadian
-          College of Technology and Business. Building practical knowledge in
-          Python, SQL, Tableau, Power BI, and machine learning through coursework
-          and hands-on learning projects.
-        </p>
-        <p className="leading-relaxed">
-          Familiar with basic data analysis techniques and concepts such as
-          exploratory data analysis (EDA), data visualization, and predictive
-          modeling, and eager to deepen expertise in these areas. Passionate about
-          using data to support business decisions and improve user experiences,
-          especially in industries like retail. Known for being adaptable,
-          proactive, and committed to continuous learning.
-        </p>
-      </section>
-
-      {/* Technical Skills */}
-      <section className="mb-12 max-w-4xl mx-auto">
-        <h2 className="text-mustard text-3xl font-semibold mb-6">Technical Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-          {[
-            { icon: <FaPython className="text-neonblue w-12 h-12 mx-auto" />, label: "Python" },
-            { icon: <FaDatabase className="text-neonblue w-12 h-12 mx-auto" />, label: "SQL" },
-            { icon: <FaTable className="text-neonblue w-12 h-12 mx-auto" />, label: "Power BI" },
-            { icon: <FaChartBar className="text-neonblue w-12 h-12 mx-auto" />, label: "Tableau" },
-            { icon: <FaLaptopCode className="text-neonblue w-12 h-12 mx-auto" />, label: "Jupyter Lab" },
-          ].map(({ icon, label }, i) => (
-            <div
-              key={i}
-              className="bg-[#111] rounded-lg p-5 shadow-neonblue hover:scale-110 transition-transform text-center cursor-default"
-            >
-              {icon}
-              <p className="mt-3 font-semibold text-softwhite">{label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Relevant Experience */}
-      <section className="mb-12 max-w-4xl mx-auto">
-        <h2 className="text-mustard text-3xl font-semibold mb-6">Relevant Experience</h2>
-
-        {/* Projects */}
-        <div className="mb-8">
-          <h3 className="text-neonblue text-xl font-semibold mb-2">CCTB Projects</h3>
-          <ul className="list-disc ml-5 space-y-2 leading-relaxed">
-            <li>Exploratory Data Analysis (EDA) with the IRIS and Wine quality Dataset using Jupyter Lab with basic visualizations.</li>
-            <li>Developed a fast-food restaurant simulation in Python, applying OOP concepts such as inheritance, abstraction, and polymorphism.</li>
-            <li>Utilized SQL to query and analyze datasets using SELECT, WHERE, GROUP BY, and conditional statements.</li>
-          </ul>
-        </div>
-
-        {/* ETATEX */}
-        <div className="mb-8">
-          <h3 className="text-neonblue text-xl font-semibold mb-2">
-            Buyer Analyst - ETATEX C.A. | Quito, Ecuador | Jul 2023 – Apr 2024
-          </h3>
-          <ul className="list-disc ml-5 space-y-2 leading-relaxed">
-            <li>Conducted data analysis, dashboards, and key metric interpretation using Excel, SAP, and Power BI.</li>
-            <li>Managed suppliers and customer service.</li>
-            <li>Developed compliance and compensation programs for employees.</li>
-            <li>Prepared reports to enhance sales, purchasing trends, and promotions.</li>
-            <li>Created strategies to expand market reach and attract distributors.</li>
-          </ul>
-        </div>
-
-        {/* ICESA */}
-        <div>
-          <h3 className="text-neonblue text-xl font-semibold mb-2">
-            Internal Purchases Analyst - ICESA S.A. | Quito, Ecuador | Sep 2022 – May 2023
-          </h3>
-          <ul className="list-disc ml-5 space-y-2 leading-relaxed">
-            <li>Assigned schedules for impulse personnel in stores with management tools.</li>
-            <li>Customer service and problem solving.</li>
-            <li>Collaborated with teams to improve operational performance.</li>
-            <li>Checked materials availability and created reports.</li>
-            <li>Presented proposals and collaborated on marketing strategies.</li>
-            <li>Developed product strategies for positive results.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Education */}
-      <section className="mb-12 max-w-4xl mx-auto">
-        <h2 className="text-mustard text-3xl font-semibold mb-6">Education</h2>
-        <p className="mb-3">
-          <strong>Canadian College of Technology and Business</strong> — Data Engineering and Analytics with Co-op, IT | Expected June 2025
-        </p>
-        <p className="mb-6">Relevant coursework: Python, Tableau, Power BI, Jupyter Lab, Machine Learning, SQL, Big Data Technologies, and Data Science.</p>
-
-        <p className="mb-3">
-          <strong>University of Americas</strong> — Bachelor of International Business | Graduated July 2022
-        </p>
-        <p>Strong foundation in business analytics, logistics, and cross-functional collaboration.</p>
-      </section>
-
-      {/* Certifications */}
-      <section className="mb-12 max-w-4xl mx-auto">
-        <h2 className="text-mustard text-3xl font-semibold mb-6">Certifications</h2>
-        <ul className="list-disc ml-5 space-y-2">
-          <li>Business Analysis Foundations (LinkedIn)</li>
-          <li>Business Analyst and Project Manager Collaboration (LinkedIn)</li>
-          <li>Learning Excel: Data Analysis (LinkedIn)</li>
-          <li>SQL for Data Analysis</li>
-        </ul>
-      </section>
-
-      {/* Download Resume */}
-      <section className="text-center max-w-4xl mx-auto">
-        <a
-          href="/assets/Willian_Atarihuana_Resume.pdf"
-          download
-          className="inline-block bg-neonblue text-black font-bold py-3 px-8 rounded-full shadow-neonblue hover:bg-mustard transition-colors"
-        >
-          Download My Resume (PDF)
-        </a>
-        <p className="mt-4 text-softwhite">
-          Or find me on{" "}
+    <div className="min-h-screen bg-blackbg text-softwhite flex flex-col items-center p-6 font-sans">
+      <header className="text-center max-w-3xl">
+        <h1 className="text-mustard text-5xl font-bold mb-4">Willian Atarihuana</h1>
+        <p className="text-sm mb-6">
+          +1 236-785-2215 |{" "}
+          <a href="mailto:willian.atarihuana98@gmail.com" className="underline hover:text-mustard">
+            willian.atarihuana98@gmail.com
+          </a>{" "}
+          | Burnaby, BC |{" "}
           <a
             href="https://www.linkedin.com/in/willianatarihuana"
             target="_blank"
-            rel="noreferrer"
-            className="text-mustard underline"
+            rel="noopener noreferrer"
+            className="text-neonblue hover:underline inline-flex items-center gap-1"
           >
-            LinkedIn
+            <FaLinkedin /> LinkedIn
           </a>
-          .
         </p>
-      </section>
+      </header>
+
+      <main className="max-w-4xl text-white space-y-8">
+        <section>
+          <h2 className="text-mustard text-2xl font-semibold mb-2">Professional Summary</h2>
+          <p>
+            Two years of experience working with databases, strong foundation in data analysis,
+            business operations, and customer service. Currently pursuing a Diploma in Data
+            Engineering and Analytics at the Canadian College of Technology and Business.
+            Skilled in Python, SQL, Tableau, Power BI, and machine learning.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-mustard text-2xl font-semibold mb-2">Technical Skills</h2>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Programming Languages: Python, SQL</li>
+            <li>Productivity Apps: Microsoft Office (Excel, PPT, Word)</li>
+            <li>Data Visualization: Tableau, Power BI</li>
+            <li>Data Analysis: Jupyter Lab, SAP</li>
+            <li>Machine Learning: Basic understanding of ML techniques</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-mustard text-2xl font-semibold mb-2">Relevant Experience</h2>
+          <p>
+            <strong>Buyer Analyst — ETATEX C.A. | Quito, Ecuador | Jul 2023 – Apr 2024</strong>
+            <br />
+            Conducted data analysis, created dashboards, managed suppliers, and supported decision-making with Excel, SAP, and Power BI.
+          </p>
+          <p className="mt-3">
+            <strong>Internal Purchases Analyst — ICESA S.A. | Quito, Ecuador | Sep 2022 – May 2023</strong>
+            <br />
+            Managed schedules, customer service, and collaborated on data-driven operational improvements.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-mustard text-2xl font-semibold mb-2">Education</h2>
+          <p>
+            <strong>Canadian College of Technology and Business</strong> — Data Engineering and Analytics, expected June 2025
+          </p>
+          <p className="mt-2">
+            <strong>University of Americas, Quito, Ecuador</strong> — Bachelor of International Business, graduated July 2022
+          </p>
+        </section>
+
+        <section className="text-center mt-8">
+          <a
+            href="/assets/Willian_Atarihuana_Resume.pdf"
+            download
+            className="inline-flex items-center gap-2 bg-mustard text-black font-semibold px-6 py-3 rounded-lg shadow-neonblue hover:shadow-lg transition-shadow"
+          >
+            <FaDownload />
+            Download My Resume
+          </a>
+        </section>
+      </main>
     </div>
   );
 }
+
+export default App;
+
+
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        mustard: "#facc15",
+        softwhite: "#e5e7eb",
+        blackbg: "#0d1117",
+        neonblue: "#06b6d4",
+      },
+      boxShadow: {
+        neonblue: "0 0 10px #06b6d4",
+      },
+    },
+  },
+  plugins: [],
+};
+
+willian-portfolio/public/assets/Willian_Atarihuana_Resume.pdf
+
+npm start
 
 
 
