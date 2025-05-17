@@ -3,222 +3,120 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Willian Atarihuana - Resume</title>
+<title>Willian Atarihuana | Resume</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+  /* Reset and base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
 
   body {
-    margin: 0;
-    background-color: #000;
-    color: #fff;
     font-family: 'Roboto', sans-serif;
-    padding: 40px 20px;
-    line-height: 1.6;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Orbitron', monospace;
-    color: #d4af37; /* Mustard */
-    margin-bottom: 12px;
-  }
-
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 5px;
-    letter-spacing: 3px;
-    text-shadow:
-      0 0 6px #d4af37,
-      0 0 12px #d4af37;
-  }
-
-  h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #d4af37;
-    padding-bottom: 6px;
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-    margin-top: 28px;
-    color: #d4af37;
-  }
-
-  p, li {
-    font-size: 1rem;
-    max-width: 900px;
-    margin-bottom: 10px;
+    background-color: #0a0a0a;
     color: #eee;
-  }
-
-  ul {
-    margin-left: 20px;
-  }
-
-  li::marker {
-    color: #d4af37;
-    font-weight: bold;
+    scroll-behavior: smooth;
   }
 
   a {
     color: #d4af37;
     text-decoration: none;
-    border-bottom: 1px dashed #d4af37;
-    transition: color 0.3s ease, border-color 0.3s ease;
   }
-
   a:hover {
     color: #fff;
-    border-color: #fff;
   }
 
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 60px auto 60px;
+    padding: 0 20px;
+  }
+
+  /* Neon title style */
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow:
+      0 0 8px #d4af37,
+      0 0 15px #d4af37,
+      0 0 25px #d4af37;
+    letter-spacing: 6px;
+  }
+
+  /* Subtitle/contact */
   .contact-info {
     text-align: center;
     font-size: 1.1rem;
     margin-bottom: 40px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.3px;
+    color: #bbb;
+  }
+  .contact-info a {
+    border-bottom: 1px dotted #d4af37;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 50px;
+  }
+
+  section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #d4af37;
+    margin-bottom: 18px;
+    text-shadow:
+      0 0 6px #d4af37,
+      0 0 10px #d4af37;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 6px;
+    letter-spacing: 2px;
+  }
+
+  /* Section content */
+  p, ul {
+    font-size: 1rem;
+    line-height: 1.6;
     color: #eee;
   }
 
-  .linkedin-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-    margin-top: 10px;
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
   }
 
-  .linkedin-link i {
-    color: #0a66c2; /* LinkedIn blue */
-    font-size: 1.3rem;
-  }
-
-  .section {
-    background: #111;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow:
-      0 0 15px #d4af37,
-      inset 0 0 10px #d4af37;
-    max-width: 950px;
-    margin: 0 auto 40px auto;
+  ul li {
+    margin-bottom: 10px;
   }
 
   /* Icons for sections */
-  .icon {
+  .section-icon {
+    margin-right: 10px;
     color: #d4af37;
-    font-size: 1.6rem;
   }
 
-  /* Header LinkedIn */
-  header {
-    max-width: 950px;
-    margin: 0 auto 30px auto;
-    display: flex;
-    justify-content: center;
-  }
-
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-<body>
-
-<header>
-  <a href="https://www.linkedin.com/in/willianatarihuana" target="_blank" class="linkedin-link" aria-label="LinkedIn profile">
-    <i class="fab fa-linkedin"></i> Find me on LinkedIn
-  </a>
-</header>
-
-<h1>Willian Atarihuana</h1>
-<div class="contact-info">
-  +1 236-785-2215 | <a href="mailto:willian.atarihuana98@gmail.com">willian.atarihuana98@gmail.com</a> | Burnaby, BC
-</div>
-
-<div class="section">
-  <h2><i class="fas fa-user icon" aria-hidden="true"></i> Professional Summary</h2>
-  <p>Two years of experience working with databases, with a strong foundation in data analysis, business operations, and customer service. Currently pursuing a Diploma in Data Engineering and Analytics at the Canadian College of Technology and Business. Building practical knowledge in Python, SQL, Tableau, Power BI, and machine learning through coursework and hands-on learning projects.</p>
-  <p>Familiar with basic data analysis techniques and concepts such as exploratory data analysis (EDA), data visualization, and predictive modeling, and eager to deepen expertise in these areas. Passionate about using data to support business decisions and improve user experiences, especially in industries like retail. Known for being adaptable, proactive, and committed to continuous learning.</p>
-</div>
-
-<div class="section">
-  <h2><i class="fas fa-code icon" aria-hidden="true"></i> Technical Skills</h2>
-  <ul>
-    <li>Programming Languages: Python, SQL</li>
-    <li>Productivity Applications: Microsoft Office (Excel, PPT, Word)</li>
-    <li>Data Visualization Tools: Tableau, Power BI</li>
-    <li>Data Analysis Tools: Jupyter Lab, SAP</li>
-    <li>Machine Learning: Basic understanding of ML techniques for data analysis</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2><i class="fas fa-briefcase icon" aria-hidden="true"></i> Relevant Experience</h2>
-
-  <h3>CCTB Projects</h3>
-  <ul>
-    <li>Exploratory Data Analysis (EDA) with the IRIS and Wine quality Dataset using Jupyter Lab with some basic visualizations.</li>
-    <li>Developed a fast-food restaurant simulation in Python, applying object-oriented principles such as inheritance, abstraction, and polymorphism to model systems like ordering, cooking, and fulfillment using abstract and concrete classes.</li>
-    <li>Utilized SQL to query and analyze datasets using SELECT, FROM, WHERE, GROUP BY, and conditional statements to extract insights and support data-driven decision making.</li>
-  </ul>
-
-  <h3>Buyer Analyst</h3>
-  <p><strong>ETATEX C.A. | Quito, Ecuador | July 2023 – April 2024</strong></p>
-  <ul>
-    <li>Conducted data analysis, created dashboards, and interpreted key metrics to support decision-making and continuous improvement with tools like Excel, SAP and Power BI.</li>
-    <li>Customer service and management of national and international suppliers.</li>
-    <li>Managed quality control, resolved nationwide store requirements, and developed compliance compensation programs for employees.</li>
-    <li>Prepared weekly reports and devised plans to enhance annual sales, purchasing trends, and product promotions.</li>
-    <li>Developed new textile products and strategies to expand market reach and attract distributors.</li>
-  </ul>
-
-  <h3>Internal Purchases Analyst</h3>
-  <p><strong>ICESA S.A. | Quito, Ecuador | September 2022 – May 2023</strong></p>
-  <ul>
-    <li>Assignment of schedules for impulse personnel in stores with management tools.</li>
-    <li>Customer service and problem solving.</li>
-    <li>Collaborated with cross-functional teams to implement data-driven solutions, improving operational performance.</li>
-    <li>Check that all necessary material is available for the offices and create reports for new orders.</li>
-    <li>Presented proposals to buyers and collaborated on marketing strategies.</li>
-    <li>Create product strategies to achieve positive results.</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2><i class="fas fa-graduation-cap icon" aria-hidden="true"></i> Education</h2>
-  <p><strong>Canadian College of Technology and Business | Vancouver, BC</strong><br />
-    Data Engineering and Analytics with Co-op, IT | Expected June 2025</p>
-  <ul>
-    <li>Relevant coursework: Python, Tableau, Power BI, Jupyter Lab, Machine Learning, SQL, Big Data Technologies and Data Science.</li>
-    <li>Hands-on experience in exploratory data analysis (EDA), data visualization, and predictive modeling.</li>
-  </ul>
-
-  <p><strong>University of Americas | Quito, Ecuador</strong><br />
-    Bachelor of International Business, Business | Graduated July 2022</p>
-  <ul>
-    <li>Developed a strong foundation in business analytics, logistics, and cross-functional collaboration.</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2><i class="fas fa-certificate icon" aria-hidden="true"></i> Certifications</h2>
-  <ul>
-    <li>Business Analysis Foundations (LinkedIn)</li>
-    <li>Business Analyst and Project Manager Collaboration (LinkedIn)</li>
-    <li>Learning Excel: Data Analysis (LinkedIn)</li>
-    <li>SQL for Data Analysis</li>
-  </ul>
-</div>
-
-<footer style="max-width:950px; margin:auto; text-align:center; padding:20px 0; color:#d4af37; font-family:'Orbitron', monospace;">
-  <a href="https://www.linkedin.com/in/willianatarihuana" target="_blank" class="linkedin-link" aria-label="LinkedIn profile">
-    <i class="fab fa-linkedin"></i> Connect with me on LinkedIn
-  </a>
-</footer>
+  /* LinkedIn button */
+  .linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 6px;
+    box-shadow:
+      0 0 8px #d4af37;
 
 </body>
 </html>
